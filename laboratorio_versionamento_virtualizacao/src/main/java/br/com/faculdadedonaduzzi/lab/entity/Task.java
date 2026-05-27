@@ -3,6 +3,8 @@ package br.com.faculdadedonaduzzi.lab.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Entity
 @Table(name = "tasks")
@@ -13,9 +15,9 @@ public class Task {
 
     private String titulo;
     private String descricao;
-    private String atributo;
 
     @Enumerated(EnumType.STRING)
     private TaskStatus status;
 
+    private Date dataPrevisao;
 }
